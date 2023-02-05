@@ -1,8 +1,8 @@
 # Product-Landing-Page
 Freecodeonline Project: A product landing page created using only html and css
 
-#HTML 
-#CSS
++HTML 
++CSS
 
 ** start of undefined **
 
