@@ -6,6 +6,7 @@ Freecodeonline Project: A product landing page created using only html and css
 
 ** start of undefined **
 #HTML
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -117,12 +118,13 @@ Freecodeonline Project: A product landing page created using only html and css
     </div>
   </body>
 </html>
+```
 
 ** end of undefined **
 
 #CSS
 ** start of undefined **
-
+```
 /* global element styling */
 
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
@@ -475,5 +477,5 @@ footer span {
   font-size: 0.9em;
   color: #444
 }
-
+```
 ** end of undefined **
