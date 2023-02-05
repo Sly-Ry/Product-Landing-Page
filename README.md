@@ -1,11 +1,11 @@
 # Product-Landing-Page
 Freecodeonline Project: A product landing page created using only html and css
 
-- HTML(#HTML) 
-- CSS(#CSS)
+#HTML 
+#CSS
 
 ** start of undefined **
-#HTML
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -122,8 +122,9 @@ Freecodeonline Project: A product landing page created using only html and css
 
 ** end of undefined **
 
-#CSS
+
 ** start of undefined **
+
 ```
 /* global element styling */
 
@@ -478,4 +479,5 @@ footer span {
   color: #444
 }
 ```
+
 ** end of undefined **
