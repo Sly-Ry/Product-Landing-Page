@@ -2,8 +2,6 @@
 Freecodeonline Project: A product landing page created using only html and css
 
 + HTML
-+ CSS
-
 ** start of undefined **
 
 ```
@@ -122,7 +120,7 @@ Freecodeonline Project: A product landing page created using only html and css
 
 ** end of undefined **
 
-
++ CSS
 ** start of undefined **
 
 ```
