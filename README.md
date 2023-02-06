@@ -1,5 +1,5 @@
 # Product-Landing-Page
-Freecodeonline Project: A product landing page created using only html and css
+Freecodeonline Project: A product landing page created using HTML and CSS
 
 + HTML
 
