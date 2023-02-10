@@ -41,34 +41,32 @@ a {
 
 /* Header Section */
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
-    min-height: 70px;
-    padding: 0px 20px;
+    height: auto;
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgb(86, 78, 64);
+    background-color: rgb(64, 73, 64);
     border-bottom: 5px solid rgb(71, 105, 70);
-    z-index: 1; 
+    z-index: 9999; 
 }
 
 .logo {
     width: 65vw;
 }
 
-.logo img {
-    margin: 20px 0 10px 0;
-    width: 100%;
-    height: 80px;
-    max-width: 150px;
+.logo h1 {
     display: flex;
     align-items: center;
     text-align: center;
-    justify-content: center;
-    border-radius: 35% 55%;
-    rotate: -9deg;
+    justify-content: flex-start;
+}
+
+.logo h1 a {
+    color: rgb(127, 255, 144);
 }
 
 nav {
@@ -80,27 +78,32 @@ nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    list-style: none;
 }
 
-nav ul li {
-    list-style: none;
+nav ul li a {
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover {
+    color: rgb(158, 247, 140);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    transition:
+        color .5s;
 }
 
 
 /* Hero Section */
 .hero {
-    position: relative;
+    margin-top: 30px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    height: 80%;
-    width: auto;
-    margin-top: 100px;
 }
 
-.hero::before {
+/* .hero::before {
     content: "";
     background-image: url("https://c4.wallpaperflare.com/wallpaper/463/878/519/pickles-vegetables-food-green-wallpaper-preview.jpg");
     opacity: .7;
@@ -111,19 +114,15 @@ nav ul li {
     background-size: cover;
     position: absolute;
     z-index: -9999
-}
+} */
 
 .hero h2 {
-    margin-bottom: 55px;
-    padding: 15px;
+    margin-bottom: 20px;
     word-wrap: break-word;
     font-style: Lato, sans-serif;
-    font-size: 500%;
-    text-shadow: 1px 8px 7px rgb(0, 0, 0);
-    color: rgb(53, 203, 161);
-    border: 2px solid  rgba(100, 200, 150, .7);
+    font-size: 200%;
+    color: rgb(23, 85, 67);
 }
-
 
 form {
     display: flex;
@@ -133,24 +132,32 @@ form {
     justify-content: center;
 }
 
-.hero input[type="email"] {
-    max-width: 350px;
+.hero input {
     width: 100%;
     padding: 10px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, .7);
-    border: 1px solid rgb(255, 255, 255, .5);
+    margin-bottom: 50px;
+    height: 40px;
+    border: none;
+}
+
+.hero input:focus {
+    outline: none;
+    background-color:rgb(23, 85, 67);
+}
+
+
+.hero input[type="email"] {
+    max-width: 350px;
+    background-color: rgb(63, 63, 63);
     font-size: 15px;
     color: white;
+    border-style: hidden;
 }
 
 .hero input[type="submit"] {
+    margin-left: -10px;
     max-width: 70px;
-    width: 100%;
-    height: 30px;
-    border: 3px solid rgb(58, 103, 67);
-    border-radius: 13px;
+    border-radius: 0 13px 13px 0;
     background-color: rgb(137, 173, 118);
     font-weight: bold;
     color: rgb(0, 0, 0);
@@ -182,15 +189,9 @@ form {
     width: 100%;
 }
 
-#media .video {
-    padding: 0 5px;
-}
-
 #media .video iframe {
-    max-width: 530px;
-    min-width: 270px;
     width: 100%;
-    margin: 0;
+    height: 100%;
     border-top: 20px solid rgb(195, 195, 65);
     border-radius: 0 0 20px 20px;
     box-shadow:  0px 5px 10px black;
@@ -199,7 +200,6 @@ form {
 
 /* Styles Section */
 #styles {
-    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -207,14 +207,12 @@ form {
 
 #styles .style {
     display: flex;
+    height: 230px;
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: calc(100% / 3);
     min-width: 160px;
-    margin: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
     overflow: hidden;
 }
 
@@ -237,7 +235,7 @@ form {
 }
 
 .style .btn {
-    margin: -5px 0 10px 0;
+    margin-bottom: 15px;
     max-width: 40px;
     width: 100%;
     height: 30px;
@@ -261,7 +259,6 @@ form {
 
 /* Footer */
 footer {
-    margin-top: 50px;
     background-color: rgb(162, 158, 137);
     padding: 15px;
 }
@@ -287,17 +284,26 @@ footer span {
 /* Media 500px-650px */
 
 @media (max-width: 500px) {
-    header { 
-      flex-wrap: wrap;
+
+    header {
+        padding-top: 25px;
+        flex-wrap: wrap;
     }
 
+
     .logo {
-      margin-top: 15px;
-      width: 100%;
-      position: relative;
+        background-color: rgb(127, 255, 144);
+        font-size: 120%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border: 5px solid white;
+        border-radius: 25px;
+        padding: 0 25px;
     }
   
-    .logo img {
+    .logo h1 a {
+        color: rgb(64, 73, 64);
         margin: 0 auto;
     } 
 
@@ -305,37 +311,111 @@ footer span {
         margin-top: 10px;
         width: 100%;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 0 50px;
+        padding: 10px 50px;
         transition: smooth;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
     }
 
+    nav ul li {
+        padding: 0 25px ;
+    }
+
+    /* hero section */
+
     .hero {
-        margin-top: 150px;
         height: 50%;
+        border-bottom: 5px solid rgb(71, 105, 70);
     }
 
     .hero h2 {
-        font-size: 400%;
+        font-size: 130%;
     }
-}
 
-@media (max-width: 650px) {
-    #styles {
-        flex-direction: column;
+    /* media section */
+    #media {
+        width: 100%;
+        height: auto;
+        background-color: rgb(178, 209, 127);
+        display: flex;
         align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        overflow: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
     }
 
+    #media .video {
+        width: 100%;
+        height: 100%;
+        margin-left: 25px;
+        margin-right: -15px;
+    }
+    
+    #media .video iframe {
+        width: 380px;
+        height: 230px;
+        border-top: 20px solid rgb(255, 242, 64);
+    }
+
+    #media .video iframe:last-child {
+        margin-right: 25px;
+    }
+
+    #media::-webkit-scrollbar {
+        width: 1em;
+    }
+
+    #media::-webkit-scrollbar-track:hover {
+        background-color: rgba(0, 0, 0, .2);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, .2)
+
+    }
+
+    #media::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgb(35, 107, 13);
+    }
+
+    /* style section */
+    #styles {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+    }
+    
     .style {
         max-width: 300px;
         width: 100%;
         margin: 0 auto;
         margin-bottom: 10px;
+        background-color: rgb(16, 49, 7);
+        color: white;
+        
+    }
+
+    .style:hover {
+        background-color: rgb(151, 224, 131);
+        color: black;
+        transition:
+            background-color .5s ease,
+            color .5s;
+        
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
 }
+
+@media (max-width: 650px) {}
