@@ -186,12 +186,6 @@ form {
 }
 
 
-/* Features Section
-#features {
-  margin-top: 30px;
-} */
-
-
 /* media section */
 #media {
     width: 100%;
@@ -254,7 +248,8 @@ form {
 
 
 #styles .style {
-    border-top: 7px solid rgb(16, 49, 7);;
+    border-top: 7px solid rgb(16, 49, 7);
+    border-bottom: 7px solid rgb(16, 49, 7);
     border-radius: 16px;
     width: 100%;
     padding: 30px;
@@ -273,30 +268,39 @@ form {
 
 #styles .style:hover {
     width: 80%;
-    font-size: 200%;
+    font-size: 180%;
     transition:
-        width .3s ease-in;
+        width .2s ease-in;
 }
 
 #whole {
     background-image: url("https://wallpapers.com/images/file/pickles-with-shiny-skin-dyl6wv9me0y2ynic.jpg");
-    background-repeat: no-repeat;
-    background-size: fill;
-    background-position: center;
 }
 
 #spears {
     background-image: url("https://assets.bonappetit.com/photos/5bec46ad77ffda5e6a77f461/16:9/w_640,c_limit/spicy-lightly-pickled-cucumbers.jpg");
+}
+
+#slices {
+    background-image: url("https://as1.ftcdn.net/v2/jpg/01/26/67/46/1000_F_126674682_leeLfJo70GW1fsRw4wUM4tiuY58MutgV.jpg");
+}
+
+#whole, #spears, #slices {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-#slices {
-    background-image: url("https://as1.ftcdn.net/v2/jpg/01/26/67/46/1000_F_126674682_leeLfJo70GW1fsRw4wUM4tiuY58MutgV.jpg");
-    background-repeat: no-repeat;
-    background-size: fill;
-    background-position: center;
+.name {
+    background-color: rgb(47, 53, 44);
+    border-radius: 10px 10px 0 0;
+    color: white;
+    padding: 10px 0;
+    font-size: 230%;
+    font-weight: 700;
+    font-style: italic;
+    width: 83%;
+    text-transform: uppercase;
 }
 
 .info{
@@ -305,8 +309,10 @@ form {
     align-items: center;
     width: 78%;
     height: 100%;
+    padding-left: 30px; 
+    border-right: 30px solid rgba(255, 255, 255, 0.733);
     border-radius: 0 0 7px 7px;
-    margin-top: 10px;
+    background-color: rgba(88, 88, 88, 0.336);
     color:rgba(255, 255, 255, 0);
     transition: 
         color .2s;
@@ -318,18 +324,6 @@ form {
     color:rgba(255, 255, 255, 0.952);
     transition: 
         color .2s;
-}
-
-.name {
-    background-color: rgb(35, 36, 34);
-    border-radius: 10px 10px 0 0;
-    color: white;
-    padding: 10px 0;
-    font-size: 230%;
-    font-weight: 700;
-    font-style: italic;
-    width: 83%;
-    text-transform: uppercase;
 }
 
 .price-range {
@@ -395,6 +389,29 @@ footer span {
     justify-content: flex-end;
     font-size: 0.9em;
     color: #444
+}
+
+
+/* media screen 1000px */
+@media (max-width: 1200px) {
+   #styles .style {
+    height: auto;
+   }
+
+    #styles .style:hover {
+        font-size: 130%;
+    }
+
+    .name {
+        font-size: 170%;
+    }
+
+    .info {
+        background-color: rgba(0, 0, 0, 0.582);
+        color:rgba(255, 255, 255, 0.952);
+        border: none;
+        padding: 0;
+    }
 }
 
 
