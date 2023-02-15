@@ -249,13 +249,16 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-top: 5px solid rgb(71, 105, 70);
 }
 
+
+
 #styles .style {
-    padding: 30px;
+    border-top: 7px solid rgb(16, 49, 7);;
+    border-radius: 16px;
     width: 100%;
-    height: 530px;
+    padding: 30px;
+    height: 500px;
     background-color: rgb(16, 49, 7);
     color: white;
     display: flex;
@@ -269,25 +272,63 @@ form {
 
 
 #styles .style:hover {
-    width: 120%;
+    width: 80%;
     font-size: 200%;
-    cursor: pointer;
-    background-color: rgb(151, 224, 131);
-    color: black;
     transition:
-        background-color .5s ease,
-        color .5s;
+        width .3s ease-in;
+}
+
+#whole {
+    background-image: url("https://wallpapers.com/images/file/pickles-with-shiny-skin-dyl6wv9me0y2ynic.jpg");
+    background-repeat: no-repeat;
+    background-size: fill;
+    background-position: center;
+}
+
+#spears {
+    background-image: url("https://assets.bonappetit.com/photos/5bec46ad77ffda5e6a77f461/16:9/w_640,c_limit/spicy-lightly-pickled-cucumbers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#slices {
+    background-image: url("https://as1.ftcdn.net/v2/jpg/01/26/67/46/1000_F_126674682_leeLfJo70GW1fsRw4wUM4tiuY58MutgV.jpg");
+    background-repeat: no-repeat;
+    background-size: fill;
+    background-position: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 78%;
+    height: 100%;
+    border-radius: 0 0 7px 7px;
+    margin-top: 10px;
+    color:rgba(255, 255, 255, 0);
+    transition: 
+        color .2s;
+
+}
+
+.info:hover {
+    background-color: rgba(0, 0, 0, 0.582);
+    color:rgba(255, 255, 255, 0.952);
+    transition: 
+        color .2s;
 }
 
 .name {
-    background-color: rgb(45, 57, 9);
-    border-radius: 20px;
+    background-color: rgb(35, 36, 34);
+    border-radius: 10px 10px 0 0;
     color: white;
     padding: 10px 0;
     font-size: 230%;
     font-weight: 700;
     font-style: italic;
-    width: 70%;
+    width: 83%;
     text-transform: uppercase;
 }
 
@@ -297,28 +338,37 @@ form {
 }
 
 .brands-by-votes {
-    margin: 15px 0;
+    width: 100%;
+    padding: 30px 0;
 }
 
+
 .style .btn {
-    margin-bottom: 15px;
-    max-width: 40px;
-    width: 100%;
-    height: 30px;
+    margin-top: 10px;
+    width: 65px;
+    height: 55px;
     border: 3px solid rgb(58, 103, 67);
-    border-radius: 13px;
+    border-radius: 25px;
     background-color: rgb(137, 173, 118);
+    font-size: 20px;
     font-weight: bold;
     color: rgb(0, 0, 0);
+    transition: 
+        width .2s;
 }
 
 .style .btn:hover {
+    width: 200px;
+    height: 200px;
     background-color: rgb(79, 215, 30);
     border: 3px solid rgb(177, 255, 193);
+    border-radius: 35px;
     color: rgb(255, 255, 255);
-    transition: 
+    transition:
+        width .2s, 
         background-color 1s, 
         border .5s,
+        border-radius .5s,
         color .5s; 
 }
 
@@ -327,6 +377,7 @@ form {
 footer {
     background-color: rgb(162, 158, 137);
     padding: 15px;
+    margin-bottom: 30px;
 }
 
 footer ul {
