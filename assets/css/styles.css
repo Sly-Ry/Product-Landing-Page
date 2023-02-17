@@ -201,7 +201,7 @@ form {
 
 #media::after {
     content: "";
-    width: 570px;
+    width: 545px;
 }
 
 #media .video {
@@ -210,7 +210,7 @@ form {
 }
 
 #media .video iframe {
-    width: 540px;
+    width: 515px;
     min-width: 270px;
     border-top: 25px solid rgb(255, 242, 64);
     border-radius: 0 0 20px 20px;
@@ -228,7 +228,6 @@ form {
 #media::-webkit-scrollbar-track:hover {
     background-color: rgba(0, 0, 0, .2);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, .2)
-
 }
 
 #media::-webkit-scrollbar-thumb {
@@ -265,13 +264,15 @@ form {
     overflow: hidden;
 }
 
-
-#styles .style:hover {
-    width: 80%;
-    font-size: 180%;
-    transition:
-        width .2s ease-in;
+@media (min-width: 1200px){
+    #styles .style:hover {
+        width: 80%;
+        font-size: 180%;
+        transition:
+            width .2s ease-in;
+    }
 }
+
 
 #whole {
     background-image: url("https://wallpapers.com/images/file/pickles-with-shiny-skin-dyl6wv9me0y2ynic.jpg");
@@ -340,7 +341,6 @@ form {
 .style .btn {
     margin-top: 10px;
     width: 65px;
-    height: 55px;
     border: 3px solid rgb(58, 103, 67);
     border-radius: 25px;
     background-color: rgb(137, 173, 118);
@@ -351,20 +351,22 @@ form {
         width .2s;
 }
 
-.style .btn:hover {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(79, 215, 30);
-    border: 3px solid rgb(177, 255, 193);
-    border-radius: 35px;
-    color: rgb(255, 255, 255);
-    transition:
-        width .2s, 
-        background-color 1s, 
-        border .5s,
-        border-radius .5s,
-        color .5s; 
+@media (min-width: 800px){
+    .style .btn:hover {
+        width: 200px;
+        background-color: rgb(79, 215, 30);
+        border: 3px solid rgb(177, 255, 193);
+        border-radius: 35px;
+        color: rgb(255, 255, 255);
+        transition:
+            width .2s, 
+            background-color 1s, 
+            border .5s,
+            border-radius .5s,
+            color .5s; 
+    }
 }
+
 
 
 /* Footer */
@@ -395,25 +397,102 @@ footer span {
 /* media screen 1000px */
 @media (max-width: 1200px) {
    #styles .style {
-    height: auto;
+        font-size: 130%;
+        height: 40%;
    }
 
-    #styles .style:hover {
-        font-size: 130%;
-    }
-
     .name {
-        font-size: 170%;
+        width: 300px;
+        height: 40px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: transparent;
+        font-size: 200%;
+        padding: -8px 1px;
+        margin-right: 115px;
+        background-color: #598a46;
+        border-radius: 0;
+        text-shadow: black -5px 0 1px;transition: 
+            background-color .5s ease-in,
+            text-shadow .7s
+        
     }
 
     .info {
+        width: 300%;
         background-color: rgba(0, 0, 0, 0.582);
         color:rgba(255, 255, 255, 0.952);
         border: none;
         padding: 0;
     }
+
 }
 
+@media (max-width: 800px) {
+    #styles {
+        max-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #styles .style {
+        width: 100%;
+        height: 30%;
+        padding: 0;
+        font-size: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 0;
+        border: 0;
+        border-top: 7px solid rgb(16, 49, 7);
+        background-color: rgba(255, 255, 255, 0.568);
+    }
+
+    #styles .style:last-child {
+        border-bottom: 7px solid rgb(16, 49, 7);
+    }
+
+    .name {
+        font-size: 40px;
+        padding-left: 30px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .style .btn {
+        width: 10%;
+        height: 300px;
+        border: 3px solid rgb(58, 103, 67);
+        background-color: rgba(137, 173, 118, 0.575);
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        transition: 
+            width .2s;
+    }
+
+    .style .btn:hover {
+        width: 14%;
+        background-color: rgb(79, 215, 30);
+        border-left: 3px solid rgb(177, 255, 193);
+        border-radius: 35px;
+        color: rgb(255, 255, 255);
+        transition:
+            width .2s, 
+            background-color .5s, 
+            border .5s,
+            border-radius .5s,
+            color .5s;
+    }
+
+    .info {
+        display: none;
+    }
+}
 
 /* Media 500px-650px */
 
