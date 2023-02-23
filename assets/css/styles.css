@@ -57,6 +57,7 @@ header {
 
 .logo {
     width: 65vw;
+    margin-bottom: 5px;
 }
 
 .logo h1 {
@@ -99,17 +100,18 @@ nav ul li a:hover {
 
 
 /* Hero Section */
-.hero {
-    margin-top: 250px;
-    padding-bottom: 350px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-    border-bottom: 7px solid rgb(71, 105, 70);
-    
+@media (min-width: 500px) {
+    .hero {
+        padding: 250px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-bottom: 7px solid rgb(71, 105, 70);
+        background-color: rgba(0, 0, 0, 0.274);
+    }
 }
+
 
 .hero::before {
     content: "";
@@ -190,7 +192,7 @@ form {
 #media {
     width: 100%;
     height: auto;
-    padding: 30px 0;
+    padding: 40px 0;
     background-color: rgb(178, 209, 127);
     display: flex;
     flex-wrap: wrap;
@@ -337,7 +339,6 @@ form {
     padding: 30px 0;
 }
 
-
 .style .btn {
     margin-top: 10px;
     width: 65px;
@@ -371,7 +372,6 @@ form {
 footer {
     background-color: rgb(162, 158, 137);
     padding: 15px;
-    margin-bottom: 30px;
 }
 
 footer ul {
@@ -394,10 +394,11 @@ footer span {
 
 /* media screen 1000px */
 @media (max-width: 1200px) {
-   #styles .style {
+
+    #styles .style {
         font-size: 130%;
         height: 40%;
-   }
+    }
 
     .name {
         width: 300px;
@@ -428,6 +429,11 @@ footer span {
 }
 
 @media (max-width: 800px) {
+    
+    .hero {
+        padding: 100px 0;
+    }
+
     #styles {
         max-height: 360px;
         display: flex;
@@ -540,7 +546,6 @@ footer span {
         flex-wrap: wrap;
     }
 
-
     .logo {
         background-color: rgb(127, 255, 144);
         font-size: 130%;
@@ -562,48 +567,49 @@ footer span {
 
     /* hero section */
 
-    form {
-        background-color: transparent;
-        border: transparent;
-    }
-
     .hero {
-        margin-top: 40px;
-        padding-bottom: 10px;
-        height: 50%;
-        border-bottom: 5px solid rgb(71, 105, 70);
+        padding: 50px;
+    }
+    .hero h2 {
+        padding: 0 5px;
+        font-size: 230%;
+        color: rgb(238, 238, 238);
     }
 
-    .hero h2 {
-        font-size: 300%;
-        color:rgb(16, 49, 7);
+    .hero input[type="email"] {
+        width: 70%;
     }
 
     /* media section */
     #media {
-        height: 340px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: flex-start;
-        flex-direction: row;
+        height: 340px;
         overflow: scroll;
         overflow-y: hidden;
-        white-space: nowrap;
+        white-space: nowrap; 
     }
 
     #media .video {
-        width: 100%;
+        width: auto;
         height: 100%;
         object-fit: cover;
-        margin-left: 65px;
-        margin-right: -15px;
+        margin-right: 35px;
     }
     
     #media .video iframe {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
         border-top: 20px solid rgb(255, 242, 64);
     }
 
+    #media .video iframe:first-child {
+        margin-left: 20px;
+    }
+
     #media .video iframe:last-child {
-        margin-right: 25px;
+        margin-right: 55px;
     }
 
     #media::after {
@@ -656,14 +662,4 @@ footer span {
         bottom: 0;
         width: 100%;
     }
-}
-
-@media (max-width: 500px) {
-
-    .logo {
-        margin: 0 20px;
-        font-size: 120%;
-    }
-
-    
 }
