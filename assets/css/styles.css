@@ -203,7 +203,7 @@ form {
 
 #media .video {
     object-fit: cover;
-    padding: 15px;
+    padding: 10px;
 }
 
 #media .video iframe {
@@ -558,7 +558,7 @@ footer span {
     /* hero section */
 
     .hero {
-        padding: 50px;
+        padding: 40px;
     }
 
     .hero h2 {
