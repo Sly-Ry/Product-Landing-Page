@@ -15,7 +15,6 @@ body {
     background-color: rgb(136, 197, 120);
 }
 
-
 .page-wrapper {
     position: relative;
 }
@@ -100,18 +99,15 @@ nav ul li a:hover {
 
 
 /* Hero Section */
-@media (min-width: 500px) {
-    .hero {
-        padding: 250px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border-bottom: 7px solid rgb(71, 105, 70);
-        background-color: rgba(0, 0, 0, 0.274);
-    }
+.hero {
+    padding: 250px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 7px solid rgb(71, 105, 70);
+    background-color: rgba(0, 0, 0, 0.274);
 }
-
 
 .hero::before {
     content: "";
@@ -158,7 +154,6 @@ form {
     background-color:rgb(23, 85, 67);
 }
 
-
 .hero input[type="email"] {
     max-width: 350px;
     background-color: rgb(63, 63, 63);
@@ -188,7 +183,7 @@ form {
 }
 
 
-/* media section */
+/* Media section */
 #media {
     width: 100%;
     height: auto;
@@ -239,14 +234,11 @@ form {
 
 
 /* Styles Section */
-
 #styles {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-
-
 
 #styles .style {
     border-top: 7px solid rgb(16, 49, 7);
@@ -274,7 +266,6 @@ form {
             width .2s ease-in;
     }
 }
-
 
 #whole {
     background-image: url("https://wallpapers.com/images/file/pickles-with-shiny-skin-dyl6wv9me0y2ynic.jpg");
@@ -319,7 +310,6 @@ form {
     color:rgba(255, 255, 255, 0);
     transition: 
         color .2s;
-
 }
 
 .info:hover {
@@ -392,7 +382,7 @@ footer span {
 }
 
 
-/* media screen 1000px */
+/* @media 1200px > */
 @media (max-width: 1200px) {
 
     #styles .style {
@@ -428,6 +418,8 @@ footer span {
 
 }
 
+
+/* @media 800px > 665px */
 @media (max-width: 800px) {
     
     .hero {
@@ -454,10 +446,6 @@ footer span {
         border-top: 7px solid rgb(16, 49, 7);
         transition: 
             height .05s ease-out;
-    }
-
-    #styles .style:last-child {
-        border-bottom: 7px solid rgb(16, 49, 7);
     }
 
     .name {
@@ -514,6 +502,10 @@ footer span {
                 align-items .3s ease-in
                 padding .4s ease-in;
         }
+    
+        #styles .style:last-child {
+            border-bottom: 7px solid rgb(16, 49, 7);
+        }
 
         .name:not(:hover) {
             background-color: rgba(0, 0, 0, 0.404);
@@ -532,13 +524,11 @@ footer span {
                 border .5s,
                 border-radius .5s,
                 color .5s;
-            }
+        }
     }
 }
 
-
-/* Media 500px-650px */
-
+/* @media 665px > 500px */
 @media (max-width: 665px) {
 
     header {
@@ -570,6 +560,7 @@ footer span {
     .hero {
         padding: 50px;
     }
+
     .hero h2 {
         padding: 0 5px;
         font-size: 230%;
@@ -623,8 +614,7 @@ footer span {
 
     #media::-webkit-scrollbar-track:hover {
         background-color: rgba(0, 0, 0, .2);
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, .2)
-
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, .2);
     }
 
     #media::-webkit-scrollbar-thumb {
@@ -634,27 +624,34 @@ footer span {
 
     /* style section */
     #styles {
-        height: 100%;
+        max-height: 100%;
         flex-direction: row;
-        justify-content: flex-start;
-        border-top: 5px solid rgb(71, 105, 70);
+        align-items: center;
     }
     
-    .style {
-        max-width: 300px;
-        width: 100%;
-        margin-bottom: 10px;
-        background-color: rgb(16, 49, 7);
-        color: white;
+    #styles .style {
+        height: 170px;
+        border-bottom: 10px solid rgb(16, 49, 7);
     }
 
-    .style:hover {
-        background-color: rgb(151, 224, 131);
-        color: black;
-        transition:
-            background-color .5s ease,
-            color .5s;
-        
+    #styles .style:hover {
+        width: 170%;
+        border-left: 3px solid rgb(16, 49, 7);
+        border-right: 3px solid rgb(16, 49, 7);
+        transition: 
+            width .3s;
+    }
+
+    #styles .style:not(:hover) {
+        opacity: .7;
+    }
+
+    .name {
+        padding: -10px;
+    }
+
+    .style .btn {
+        display: none;
     }
 
     footer {
